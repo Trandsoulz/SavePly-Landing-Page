@@ -248,6 +248,9 @@ import badge from "../assets/Images/badge.svg";
     }
   }
   @media screen and (max-width: 720px) {
+    .hero {
+      padding: .5rem;
+    }
     .image-cont {
       display: none;
     }
@@ -269,13 +272,14 @@ import badge from "../assets/Images/badge.svg";
       font-size: 0.8125rem;
     }
     .input-cont input {
-      width: 90%;
+      width: 100%;
     }
     .join-waitlist-btn-small {
       width: 35%;
       padding: 0.15625rem;
     }
     .container-2 {
+      padding: 1rem;
       max-width: 40.625rem;
       flex-wrap: wrap;
     }
@@ -299,7 +303,7 @@ import badge from "../assets/Images/badge.svg";
   }
 </style>
 
-<script>
+<!-- <script>
   function observers(element, classtoadd) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -317,4 +321,4 @@ import badge from "../assets/Images/badge.svg";
   observers(document.querySelector(".image-cont"), "faderight");
   observers(document.querySelector(".second-text-cont"), "fadeleft");
   observers(document.querySelector(".second-image-cont"), "faderight");
-</script>
+</script> -->
