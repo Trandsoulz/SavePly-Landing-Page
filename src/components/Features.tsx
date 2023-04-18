@@ -15,7 +15,7 @@ export default function Features() {
           financial goals
         </p>
       </div>
-      <div className="bg-purp p-20 w-full mt-10 items-center justify-between text-white rounded-3xl flex-col md:flex-row flex gap-10">
+      <div className="bg-purp grid md:block grid-col-2 md:p-20 p-10 w-full mt-10 items-center justify-between text-white rounded-3xl flex-col md:flex-row flex gap-10">
         <div>
           <div>
             <h4 className="text-yello md:text-[36px] font-semibold">
@@ -82,7 +82,7 @@ export default function Features() {
         <div>
           <img src={pie} alt="" />
         </div>
-        <div className="space-y-3">
+        <div className="space-y-3 col-span-2">
           <h4 className="text-yello font-bold md:text-5xl text-4xl">
             Budget Tracking
           </h4>
@@ -149,7 +149,7 @@ export default function Features() {
           <img src={largeImg} className="rounded-xl md:rounded-none" alt="" />
         </div>
         <div className="w-full space-y-5 text-white p-10 h-full">
-          <h4 className="font-bold text-5xl w-96 text-yello ">
+          <h4 className="font-bold text-5xl md:w-96 text-yello ">
             Save simply, not harder.
           </h4>
           <p className="">

@@ -6,18 +6,8 @@ import innerlogo from '../assets/images/innercircle.svg';
     <div class='top-nav'>
         <div class="logo-cont">
             <p class="logo"><img src={logo} alt="" class='bigimg'> <img src={innerlogo} alt="" class="smallimg"> SAVEPLY</p>
-            <div class="hamburger-menu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
         </div>
-        <ul class="nav-list">
-            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Why Us</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
-        </ul>
+       
         <button class="btn join-waitlist-btn-large">Join Waitlist</button>
     </div>    
 </header>
@@ -105,27 +95,12 @@ import innerlogo from '../assets/images/innercircle.svg';
         left: .9375rem;
         top: 60%;
     }
-    /* nav-list */
-    .nav-list {
-        display: flex;
-        align-items: center;
-    }
-    .nav-item {
-        padding: 0 1.25rem;
-    }
-    .nav-link {
-        text-transform: capitalize;
-        font-weight: 400;
-        color: #000000;
-    }
-    .nav-link:hover {
-        color: var(--primary-color);
-    }
     /* btn */
     .btn {
         background-color: var(--primary-color);
         color: var(--light-text-color);
         border-radius: .3125rem;
+        width: 150px;
     }
     .btn:hover{
        background-color:#8F0799;
@@ -159,89 +134,9 @@ import innerlogo from '../assets/images/innercircle.svg';
         .logo-cont .logo{
             font-size: .9375rem;
         }
-        .hamburger-menu{
-            max-width: 1.5625rem;
-            width: 100%;
-            z-index: 9999;
+        .btn{
+            width:200px;
         }
-        .hamburger-menu .line{
-            width: 100%;
-            background-color: var(--dark-text-color);
-            height: .3125rem;
-            margin-top: .1875rem;
-            transition: 0.3s ease-in;
-        }
-        .hamburger-menu.active .line{
-            background-color: var(--light-text-color)
-        }
-        .hamburger-menu.active .line:nth-child(1){
-            transform: translateY(.5rem) rotate(45deg)
-        }
-        .hamburger-menu.active .line:nth-child(2){
-            transform: translateX(100%);
-            opacity: 0;
-        }
-        .hamburger-menu.active .line:nth-child(3){
-            transform: translateY(-.5rem) rotate(-45deg)
-        }
-        .join-waitlist-btn-large{
-            display: none;
-        }
-        .nav-list{
-            flex-direction: column;
-            position: fixed;
-            background-color: var(--primary-color);
-            top: 0;
-            right: -100%;
-            opacity: 0;
-            width: 50%;
-            min-height: 100dvh;
-            justify-content:center;
-            z-index: 9998;
-            transition: 0.3s ease-in;
-        }
-        .nav-list.active{
-            opacity: 1;
-            right: 0;
-        }
-        .nav-item{
-            padding: .625rem 0;
-        }
-        .nav-link{
-            color: var(--light-text-color);
-            position: relative;
-        }
-        .nav-link::after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: .125rem;
-            background-color:var(--light-text-color);
-            left: 0;
-            bottom: 0;
-            transform-origin: bottom left;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in;
-        }
-        .nav-link:hover{
-            color: var(--light-text-color);
-        }
-        .nav-link:hover::after{
-            transform: scaleX(1);
-        }
+       
         }
 </style>
-<script>
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const SlideBar = document.querySelector('.nav-list');
-    const header = document.querySelector('header');
-
-    window.addEventListener('scroll', ()=>[
-        header.classList.toggle('sticky', window.scrollY > 0)
-    ])
-
-    hamburgerMenu.addEventListener('click', ()=>{
-        hamburgerMenu.classList.toggle('active');
-        SlideBar.classList.toggle('active')
-    })
-</script>
