@@ -1,142 +1,142 @@
 ---
-import logo from '../assets/images/logo.svg';
-import innerlogo from '../assets/images/innercircle.svg';
+import logo from "../assets/Images/logo.svg";
+import innerlogo from "../assets/Images/innercircle.svg";
 ---
+
 <header class="fade-top">
-    <div class='top-nav'>
-        <div class="logo-cont">
-            <p class="logo"><img src={logo} alt="" class='bigimg'> <img src={innerlogo} alt="" class="smallimg"> SAVEPLY</p>
-        </div>
-       
-        <button class="btn join-waitlist-btn-large">Join Waitlist</button>
-    </div>    
+  <div class="top-nav">
+    <div class="logo-cont">
+      <p class="logo">
+        <img src={logo} alt="" class="bigimg" />
+        <img src={innerlogo} alt="" class="smallimg" /> SAVEPLY
+      </p>
+    </div>
+
+    <button class="btn join-waitlist-btn-large">Join Waitlist</button>
+  </div>
 </header>
 
 <style>
-     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --primary-color: #7f0799;
+    --dark-text-color: #000000;
+    --light-text-color: #ffffff;
+    --max-cont-width: 73.125rem;
+  }
+  <<<<<<< HEAD ======= html {
+    /* font-size: 10px; */
+    overflow-x: hidden;
+    scroll-behaviour: smooth;
+  }
+  >>>>>>>a91abdcaeea303c78b943c4bbbba88375614d7fb body {
+    /* font-size: 1.6rem; */
+    font-family: "DM Sans", sans-serif;
+  }
+  header {
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  header.sticky {
+    position: sticky;
+    top: -0.0625rem;
+    left: 0;
+    background-color: var(--light-text-color);
+    z-index: 990;
+  }
+  /* animations */
+  .fade-top {
+    animation: fadetop 0.5s linear;
+  }
+  @keyframes fadetop {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
     }
-    :root {
-        --primary-color:#7F0799;
-        --dark-text-color: #000000;
-        --light-text-color: #ffffff;
-        --max-cont-width: 73.125rem;
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
-<<<<<<< HEAD
-=======
-    html {
-        /* font-size: 10px; */
-        overflow-x: hidden;
-        scroll-behaviour: smooth;
+  }
+  /* topnav */
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-cont-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.25rem 0;
+    /* 2 */
+  }
+  /* logo-cont styles */
+  .logo-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* logo paragraph */
+  .logo-cont p {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    position: relative;
+    color: var(--primary-color);
+    font-family: "Inter", sans-serif;
+  }
+  /* positioning the small img svg */
+  .logo .smallimg {
+    position: absolute;
+    left: 0.9375rem;
+    top: 60%;
+  }
+  /* btn */
+  .btn {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border-radius: 0.3125rem;
+    width: 150px;
+  }
+  .btn:hover {
+    background-color: #8f0799;
+  }
+  .join-waitlist-btn-large {
+    padding: 0.3125rem 0.625rem;
+  }
+  /* media-quries */
+  @media screen and (max-width: 1200px) {
+    .top-nav {
+      padding: 1.25rem 2.5rem;
     }
->>>>>>> a91abdcaeea303c78b943c4bbbba88375614d7fb
-    body {
-        /* font-size: 1.6rem; */
-        font-family: 'DM Sans', sans-serif;
+  }
+  @media screen and (max-width: 960px) {
+    .top-nav {
+      padding: 1.25rem;
     }
-    header{
-        width: 100%;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    }
-    header.sticky{
-        position: sticky;
-        top: -.0625rem;
-        left: 0;
-        background-color: var(--light-text-color);
-        z-index: 990;
-    }
-    /* animations */
-    .fade-top{
-        animation: fadetop .5s linear;
-    }
-    @keyframes fadetop{
-        0%{
-            opacity: 0;
-            transform: translateY(-100%);
-        }
-        100%{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    /* topnav */ 
-    .top-nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: var(--max-cont-width);
-        width: 100%;
-        margin: 0 auto;
-        padding: 1.25rem 0;
-        /* 2 */
-    }
-    /* logo-cont styles */
+  }
+  @media screen and (max-width: 660px) {
     .logo-cont {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      width: 100%;
     }
-    /* logo paragraph */
-    .logo-cont p{
-        display: flex;
-        align-items: center;
-        gap: .25rem;
-        position: relative;
-        color: var(--primary-color);
-        font-family: 'Inter', sans-serif;
+    .logo-cont .logo .bigimg {
+      width: 30%;
     }
-    /* positioning the small img svg */
-    .logo .smallimg{
-        position: absolute;
-        left: .9375rem;
-        top: 60%;
+    .logo .smallimg {
+      width: 10%;
+      left: 0.75rem;
+      top: 60%;
     }
-    /* btn */
+    .logo-cont .logo {
+      font-size: 0.9375rem;
+    }
     .btn {
-        background-color: var(--primary-color);
-        color: var(--light-text-color);
-        border-radius: .3125rem;
-        width: 150px;
+      width: 200px;
     }
-    .btn:hover{
-       background-color:#8F0799;
-    }
-    .join-waitlist-btn-large{
-        padding: .3125rem .625rem;
-    }
-    /* media-quries */
-    @media screen and (max-width:1200px){
-        .top-nav{
-            padding: 1.25rem 2.5rem;
-        }
-    }
-    @media screen and (max-width:960px){
-        .top-nav{
-            padding: 1.25rem;
-        }
-    }
-    @media screen and (max-width: 660px){
-        .logo-cont{
-            width:100%;
-        }
-        .logo-cont .logo .bigimg{
-            width: 30%
-        }
-        .logo .smallimg{
-            width: 10%;
-            left: .75rem;
-            top: 60%;
-        }
-        .logo-cont .logo{
-            font-size: .9375rem;
-        }
-        .btn{
-            width:200px;
-        }
-       
-        }
+  }
 </style>

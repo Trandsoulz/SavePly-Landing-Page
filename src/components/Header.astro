@@ -1,110 +1,119 @@
 ---
-import heroimg1 from '../assets/images/Saveply (1)/svg/hero.svg';
-import badge from '../assets/images/badge.svg';
+import heroimg1 from "../assets/Images/Saveply (1)/svg/hero.svg";
+import badge from "../assets/Images/badge.svg";
 ---
-<section class='hero'>
-    <div class='container'>
-        <div class='text-cont'>
-            <h1 class='primary-title'>
-                Join the 
-                <span>Savings Revolution!</span>
-            </h1>
-            <p class='secondary-title'>
-                Save and earn simply and securely with <strong>Saveply.</strong>
-            </p>
-            <label for='email-input' class='input-cont'>
-                <input type='email' name='email-input' placeholder='Enter email to join our waitlist'>
-                <button class='btn join-waitlist-btn-small'>Join Waitlist</button>
-            </label>
-        </div>
-        <div class='image-cont'>
-            <img src={heroimg1} alt=''>
-        </div>
+
+<section class="hero">
+  <div class="container">
+    <div class="text-cont">
+      <h1 class="primary-title">
+        Join the
+        <span>Savings Revolution!</span>
+      </h1>
+      <p class="secondary-title">
+        Save and earn simply and securely with <strong>Saveply.</strong>
+      </p>
+      <label for="email-input" class="input-cont">
+        <input
+          type="email"
+          name="email-input"
+          placeholder="Enter email to join our waitlist"
+        />
+        <button class="btn join-waitlist-btn-small">Join Waitlist</button>
+      </label>
     </div>
-    <div class='container-2'>
-        <div class='second-text-cont'>
-            <h2>The Neo-Piggybank you can trust</h2>
-            <p><strong>SAVEPLY</strong> uses up-to-date encryption and security measures to protect the savings, informations and transactions of our users. Users can be assured that their funds are safe and secure.</p>
-        </div>
-        <div class='second-image-cont'>
-            <img src={badge} alt=''>
-        </div>
+    <div class="image-cont">
+      <img src={heroimg1} alt="" />
     </div>
+  </div>
+  <div class="container-2">
+    <div class="second-text-cont">
+      <h2>The Neo-Piggybank you can trust</h2>
+      <p>
+        <strong>SAVEPLY</strong> uses up-to-date encryption and security measures
+        to protect the savings, informations and transactions of our users. Users
+        can be assured that their funds are safe and secure.
+      </p>
+    </div>
+    <div class="second-image-cont">
+      <img src={badge} alt="" />
+    </div>
+  </div>
 </section>
 
 <style>
-    /* base-styles */
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  /* base-styles */
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --primary-color: #7f0799;
+    --dark-text-color: #000000;
+    --light-text-color: #ffffff;
+    --max-cont-width: 90%;
+  }
+  html {
+    /* font-size: 10px; */
+    overflow-x: hidden;
+    scroll-behaviour: smooth;
+  }
+  .btn {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border-radius: 0.3125rem;
+  }
+  .btn:hover {
+    background-color: #8f0799;
+  }
+  /* animations */
+  .fadeleft {
+    animation: fadeleft 0.5s both;
+  }
+  @keyframes fadeleft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
     }
-    :root {
-        --primary-color:#7F0799;
-        --dark-text-color: #000000;
-        --light-text-color: #ffffff;
-        --max-cont-width: 90%;
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
-    html {
-        /* font-size: 10px; */
-        overflow-x: hidden;
-        scroll-behaviour: smooth;
+  }
+  .faderight {
+    animation: faderight 0.5s both;
+  }
+  @keyframes faderight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
     }
-    .btn {
-        background-color: var(--primary-color);
-        color: var(--light-text-color);
-        border-radius: .3125rem;
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
-    .btn:hover{
-       background-color:#8F0799;
-    }
-    /* animations */
-    .fadeleft{
-        animation: fadeleft .5s both;
-    }
-    @keyframes fadeleft{
-        0%{
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-        100%{
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    .faderight{
-        animation: faderight .5s both;
-    }
-    @keyframes faderight{
-        0%{
-            opacity: 0;
-            transform: translateX(100%);
-        }
-        100%{
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    /* hero */
-    .hero{
-        width: 100%;
-        margin-top: 1.25rem;
-        padding: 2.5rem 0;
-    }
-    .container{
-        max-width: var(--max-cont-width);
-        margin: 0 auto 2.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .image-cont{
-        flex: 50%;
-        position: relative;
-    }
-    /* .image-cont::before{
+  }
+  /* hero */
+  .hero {
+    width: 100%;
+    margin-top: 1.25rem;
+    padding: 2.5rem 0;
+  }
+  .container {
+    max-width: var(--max-cont-width);
+    margin: 0 auto 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .image-cont {
+    flex: 50%;
+    position: relative;
+  }
+  /* .image-cont::before{
         content: '';
         background-color:  rgba(127, 7, 153, 0.2);
         position: absolute;
@@ -115,198 +124,197 @@ import badge from '../assets/images/badge.svg';
         z-index: -1;
         border-radius: 1rem;
     } */
-    .text-cont{
-        display: flex;
-        flex-direction: column;
+  .text-cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-cont .primary-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 3.75rem;
+  }
+  .text-cont .primary-title span {
+    display: block;
+  }
+  .text-cont .secondary-title {
+    font-size: 1.875rem;
+    font-weight: 500;
+    color: var(--dark-text-color);
+    width: 80%;
+  }
+  strong {
+    color: var(--primary-color);
+  }
+  .input-cont {
+    border: 0.987952px solid #7f0799;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    border-radius: 0.3125rem;
+    padding: 0.125rem;
+    margin-top: 1.5625rem;
+  }
+  .input-cont input {
+    width: 70%;
+    padding: 0.625rem;
+  }
+  .input-cont input:focus {
+    outline: none;
+  }
+  .join-waitlist-btn-small {
+    padding: 0.3125rem 0.4375rem;
+  }
+  /* conteainer 2 */
+  .container-2 {
+    max-width: 59.375rem;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .second-image-cont {
+    flex: 50%;
+  }
+  .second-text-cont h2 {
+    font-size: 2.1875rem;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  .second-text-cont p {
+    font-size: 1.125rem;
+  }
+  /* media-quries */
+  @media screen and (max-width: 1200px) {
+    .hero {
+      padding: 1.25rem 2.5rem;
     }
-    .text-cont .primary-title{
-        color: var(--primary-color);
-        font-weight: 700;
-        font-size: 3.75rem;
+    .text-cont .primary-title {
+      font-size: 3.125rem;
     }
-    .text-cont .primary-title span{
-        display: block;
+    .text-cont .secondary-title {
+      font-size: 1.5625rem;
     }
-    .text-cont .secondary-title{
-        font-size: 1.875rem;
-        font-weight: 500;
-        color: var(--dark-text-color);
-        width: 80%;
+    .input-cont {
+      width: 65%;
+      padding: 0.125rem;
+      font-size: 0.9375rem;
     }
-     strong{
-        color: var(--primary-color);
-    }
-    .input-cont{
-        border: 0.987952px solid #7F0799;
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
-        border-radius: .3125rem;
-        padding: .125rem;
-        margin-top:1.5625rem;
-    }
-    .input-cont input{
-        width: 70%;
-        padding: .625rem;
-    }
-    .input-cont input:focus{
-        outline: none;
+    .input-cont input {
+      width: 90%;
     }
     .join-waitlist-btn-small {
-        padding: .3125rem .4375rem;
+      width: 35%;
+      padding: 0.15625rem;
     }
-    /* conteainer 2 */
-    .container-2{
-        max-width: 59.375rem;
-        margin: 5rem auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .container-2 {
+      max-width: 46.825rem;
     }
-    .second-image-cont{
-        flex: 50%;
+  }
+  @media screen and (max-width: 960px) {
+    .hero {
+      padding: 1.25rem;
     }
-    .second-text-cont h2{
-        font-size: 2.1875rem;
-        color: var(--primary-color);
-        font-weight: 700;
+    .text-cont .primary-title {
+      font-size: 2.5rem;
     }
-    .second-text-cont p{
-        font-size: 1.125rem;
+    .text-cont .secondary-title {
+      font-size: 1.25rem;
     }
-    /* media-quries */
-    @media screen and (max-width:1200px){
-        .hero{
-            padding: 1.25rem 2.5rem;
-        }
-        .text-cont .primary-title{
-            font-size: 3.125rem;
-        }
-        .text-cont .secondary-title{
-            font-size: 1.5625rem;
-        }
-        .input-cont{
-            width: 65%;
-            padding: .125rem;
-            font-size: .9375rem;
-        }
-        .input-cont input{
-            width: 90%;
-        }
-        .join-waitlist-btn-small {
-            width: 35%;
-            padding: .15625rem;
-        }
-        .container-2{
-            max-width: 46.825rem;
-        }
+    .image-cont {
+      flex: 50%;
     }
-    @media screen and (max-width:960px){
-        .hero{
-            padding: 1.25rem;
-        }
-        .text-cont .primary-title{
-            font-size: 2.5rem;
-        }
-        .text-cont .secondary-title{
-            font-size: 1.25rem;
-        }
-        .image-cont{
-            flex: 50%
-        }
-        .input-cont{
-            width: 80%;
-            padding: .0625rem;
-        }
-        .input-cont input{
-            width: 70%;
-        }
-        .join-waitlist-btn-small {
-            width: 35%;
-            padding: .15625rem;
-        }
-        .container-2{
-            max-width: 40.625rem;
-        }
-        .second-image-cont{
-            flex: 70%;
-        }
-        .second-text-cont h2{
-            font-size: 1.5625rem;
-        }
-        .second-text-cont p{
-            font-size: 1rem;
-        }
+    .input-cont {
+      width: 80%;
+      padding: 0.0625rem;
     }
-    @media screen and (max-width: 720px){
-        .image-cont{
-            display: none;
-        }
-        .text-cont{
-            flex: 100%
-        }
-        .text-cont .primary-title{
-            font-size: 2.5rem;
-        }
-        .text-cont .primary-title span{
-            width: 80%
-        }
-        .text-cont .secondary-title{
-            font-size: 1.25rem;
-            width: 60%;
-        }
-        .input-cont{
-            width: 90%;
-            font-size: .8125rem;
-        }
-        .input-cont input{
-            width: 90%;
-        }
-        .join-waitlist-btn-small {
-            width: 35%;
-            padding: .15625rem;
-        }
-        .container-2{
-            max-width: 40.625rem;
-            flex-wrap: wrap;
-        }
-        .second-image-cont{
-            order: 1;
-            display: flex;
-            justify-content:center;
-            flex: 100%;
-        }
-        .second-text-cont{
-            margin-top: 1.875rem;
-            order: 2;
-        }
-        .second-text-cont h2{
-            font-size: 1.5625rem;
-            margin: .625rem auto;
-        }
-        .second-text-cont p{
-            font-size: 1rem;
-        }
-
+    .input-cont input {
+      width: 70%;
     }
+    .join-waitlist-btn-small {
+      width: 35%;
+      padding: 0.15625rem;
+    }
+    .container-2 {
+      max-width: 40.625rem;
+    }
+    .second-image-cont {
+      flex: 70%;
+    }
+    .second-text-cont h2 {
+      font-size: 1.5625rem;
+    }
+    .second-text-cont p {
+      font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .image-cont {
+      display: none;
+    }
+    .text-cont {
+      flex: 100%;
+    }
+    .text-cont .primary-title {
+      font-size: 2.5rem;
+    }
+    .text-cont .primary-title span {
+      width: 80%;
+    }
+    .text-cont .secondary-title {
+      font-size: 1.25rem;
+      width: 60%;
+    }
+    .input-cont {
+      width: 90%;
+      font-size: 0.8125rem;
+    }
+    .input-cont input {
+      width: 90%;
+    }
+    .join-waitlist-btn-small {
+      width: 35%;
+      padding: 0.15625rem;
+    }
+    .container-2 {
+      max-width: 40.625rem;
+      flex-wrap: wrap;
+    }
+    .second-image-cont {
+      order: 1;
+      display: flex;
+      justify-content: center;
+      flex: 100%;
+    }
+    .second-text-cont {
+      margin-top: 1.875rem;
+      order: 2;
+    }
+    .second-text-cont h2 {
+      font-size: 1.5625rem;
+      margin: 0.625rem auto;
+    }
+    .second-text-cont p {
+      font-size: 1rem;
+    }
+  }
 </style>
 
 <script>
-    function observers(element, classtoadd){
-        const observer = new IntersectionObserver((entries)=>{
-            entries.forEach((entry)=>{
-                if(entry.isIntersecting){
-                    entry.target.classList.add(classtoadd)
-                }else{
-                    entry.target.classList.remove(classtoadd)
-                }
-            })
-        })
-        observer.observe(element)
-    }
+  function observers(element, classtoadd) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(classtoadd);
+        } else {
+          entry.target.classList.remove(classtoadd);
+        }
+      });
+    });
+    observer.observe(element);
+  }
 
-    observers(document.querySelector('.text-cont'), 'fadeleft')
-    observers(document.querySelector('.image-cont'), 'faderight')
-    observers(document.querySelector('.second-text-cont'), 'fadeleft')
-    observers(document.querySelector('.second-image-cont'), 'faderight')
+  observers(document.querySelector(".text-cont"), "fadeleft");
+  observers(document.querySelector(".image-cont"), "faderight");
+  observers(document.querySelector(".second-text-cont"), "fadeleft");
+  observers(document.querySelector(".second-image-cont"), "faderight");
 </script>
