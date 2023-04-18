@@ -15,7 +15,7 @@ export default function Features() {
           financial goals
         </p>
       </div>
-      <div className="bg-purp grid md:block grid-col-2 md:p-20 p-10 w-full mt-10 items-center justify-between text-white rounded-3xl flex-col md:flex-row flex gap-10">
+      <div className="bg-purp grid md:flex grid-col-2 md:p-20 p-10 w-full mt-10 items-center justify-between text-white rounded-3xl  gap-10">
         <div>
           <div>
             <h4 className="text-yello md:text-[36px] font-semibold">
