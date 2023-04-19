@@ -17,9 +17,9 @@ const Footer = () => {
             <li>About Us</li>
             <li>Blog</li>
           </ul>
-          <div className="border max-w-[400px] flex justify-between p-1">
-            <input type="text" name="" id="" className="outline-none" />
-            <button className="bg-[#7F0799] text-white p-2 outline-none">
+          <div className=" rounded max-w-[400px] flex justify-between p-1 border-[#7F0799] border-2">
+            <input type="text" name="" id="" className="outline-none " />
+            <button className="bg-[#7F0799] rounded text-white p-2 outline-none">
               Join Waitlist
             </button>
           </div>

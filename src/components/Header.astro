@@ -4,7 +4,7 @@ import badge from "../assets/Images/badge.svg";
 ---
 
 <section class="hero">
-  <div class="container">
+  <div class="container m-6">
     <div class="text-cont">
       <h1 class="primary-title">
         Join the
@@ -13,14 +13,14 @@ import badge from "../assets/Images/badge.svg";
       <p class="secondary-title">
         Save and earn simply and securely with <strong>Saveply.</strong>
       </p>
-      <label for="email-input" class="input-cont">
-        <input
-          type="email"
-          name="email-input"
-          placeholder="Enter email to join our waitlist"
-        />
-        <button class="btn join-waitlist-btn-small">Join Waitlist</button>
-      </label>
+      <div
+        class="rounded max-w-[400px] flex justify-between p-1 border-[#7F0799] border-2"
+      >
+        <input type="text" name="" id="" class="outline-none" />
+        <button class="bg-[#7F0799] rounded text-white p-2 outline-none">
+          Join Waitlist
+        </button>
+      </div>
     </div>
     <div class="image-cont">
       <img src={heroimg1} alt="" />
@@ -141,6 +141,7 @@ import badge from "../assets/Images/badge.svg";
     font-weight: 500;
     color: var(--dark-text-color);
     width: 80%;
+    padding-bottom: 0.8rem;
   }
   strong {
     color: var(--primary-color);
@@ -249,7 +250,7 @@ import badge from "../assets/Images/badge.svg";
   }
   @media screen and (max-width: 720px) {
     .hero {
-      padding: .5rem;
+      padding: 0.2rem;
     }
     .image-cont {
       display: none;

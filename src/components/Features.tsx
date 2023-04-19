@@ -146,18 +146,22 @@ export default function Features() {
       </div>
       <div className="rounded-xl mt-10 bg-purp items-center flex flex-col md:flex-row">
         <div className="w-full ">
-          <img src={largeImg} className="rounded-xl md:rounded-none" alt="" />
+          <img
+            src={largeImg}
+            className="md:rounded-l-lg rounded-t-lg"
+            alt="Coin img"
+          />
         </div>
-        <div className="w-full space-y-5 text-white p-10 h-full">
-          <h4 className="font-bold text-5xl md:w-96 text-yello ">
-            Save simply, not harder.
+        <div className="w-full space-y-5 text-white p-6 m-3 h-full">
+          <h4 className="font-bold text-3xl md:text-4xl md:w-96 text-yello ">
+            Save simply, <br /> not harder.
           </h4>
           <p className="">
             Saving money doesn't have to be complicated. With Saveply, you can
             save more without breaking a sweat. Making it easy for you to reach
             your financial goals.
           </p>
-          <button>Learn More</button>
+          {/* <button>Learn More</button> */}
         </div>
       </div>
     </div>
